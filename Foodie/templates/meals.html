@@ -1,0 +1,178 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Serif%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Flavors of Lucknow</title>
+  
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Noto Serif", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f5f2f0] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-[#181411]">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+              </div>
+              <h2 class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em]">Flavors of Lucknow</h2>
+            </div>
+             <div class="flex items-center gap-9">
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'home' %}">Home</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'veg' %}">Vegetarian</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'nonveg' %}">Non-Vegetarian</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'meals' %}">Meals</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'desserts' %}">Desserts</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'about' %}">About</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#8a7560] flex border-none bg-[#f5f2f0] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#181411] focus:outline-0 focus:ring-0 border-none bg-[#f5f2f0] focus:border-none h-full placeholder:text-[#8a7560] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <!-- Removed heart icon button as per requirements -->
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBTA--gwg5gF1XLE4p5wck5w8oWKPAsqaO_ETpXE1JL0ft0zt9frC5lolEE1GmUFpC8XRLNGaPEMVJv8sXkwiL_s4xKT4nUHpZJiH9MxJQHDO4UdrtE7gcWh1QxEreig2cVkYB2CtZtibGS9tvL0Ku2pN1X5sXQ-HTplr6khWo4hE-AaAb0Wx8NZv0qfiOKI9rWRmxomo3HL1HETxfF3HqALXmYTBk2VC85CILhID_EZw0S9Rvz7N--fP085hfznyzFjZbC0y2mXPDJ");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#181411] tracking-light text-[32px] font-bold leading-tight">Complete Meal Experiences in Lucknow</p>
+                <p class="text-[#8a7560] text-sm font-normal leading-normal">
+                  Discover restaurants offering a full culinary journey, from appetizers to desserts, in the heart of Lucknow.
+                </p>
+              </div>
+            </div>
+            <!-- Removed drop-downs for Cuisine, Price Range, and Location -->
+            <div class="p-4 @container">
+              <div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDw64CUyeZBKchPIjpP0OWfKO_4qhddL2Ni5ua9B7LR-QJXPJja4K9k4TTzFSPmD0j0euh9Pn7oEcVMIS50Tgh-qIeHpWT5yeT8yrBRU_Kw5wmeCthucOpbc3tUlyyNLHg0awsRciY_Eg8KrMgGjq15t3vl-zM9xfwPh87CCmw6cHTckS5TK_0mptVyI3ynlI1YGbdbf7ezcnTtFxNJjiHWM2mXRu1eerTPe7WgrtlRmLYwroSWHfVDOe3fYasAYELdv84IJtwsrSJd");'
+                ></div>
+                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4 px-4">
+                  <p class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em]">The Royal Feast</p>
+                  <div class="flex items-end gap-3 justify-between">
+                    <div class="flex flex-col gap-1">
+                      <p class="text-[#8a7560] text-base font-normal leading-normal">
+                        Experience a regal dining affair with a multi-course meal featuring Awadhi delicacies and royal hospitality.
+                      </p>
+                      <p class="text-[#8a7560] text-base font-normal leading-normal">4.5 (1200+ reviews)</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f27f0c] text-[#181411] text-sm font-medium leading-normal"
+                    >
+                      <span class="truncate">View Menu</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 @container">
+              <div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDNYSqxFJ6eRibYBY3TX6ill-BNhG_4tMM3MITJ2n_GgM0DZrKnATrdv7q89TqZFxMbpOmCHW7AiBrSXTbOXoEYlcslGnos4BiMueizAI3GWcHBHcQmyhJVfZ3VUYP5xUqtr4Wee4UODifuPU_1HxccqJ41AhGUeEtReUKzI-tn3mU2uKWuA64e9UTHcKNg_2bWMIDC5rX_SCy6qlfze0nbGjX8bC9jiF8hXC4QfxFdrGei31L8d-FImBTC6r0J1yiLiZDdTTB-z1jl");'
+                ></div>
+                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4 px-4">
+                  <p class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em]">The Grand Dining Hall</p>
+                  <div class="flex items-end gap-3 justify-between">
+                    <div class="flex flex-col gap-1">
+                      <p class="text-[#8a7560] text-base font-normal leading-normal">
+                        Indulge in a lavish spread of North Indian cuisine, served in a grand setting reminiscent of Lucknow's golden era.
+                      </p>
+                      <p class="text-[#8a7560] text-base font-normal leading-normal">4.7 (900+ reviews)</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f27f0c] text-[#181411] text-sm font-medium leading-normal"
+                    >
+                      <span class="truncate">View Menu</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 @container">
+              <div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuB8pLOWZDlasnJ4iXfM22CyxyAnQemHX58a7hyT3YScneMPxsTCHdSTc1JsgTUHoQ9T2Fb31ZJnaI8tkPFgMToNRO_W14x7WU3jiiK8kSTDGL_BFyMVnSHYtgV9lbFYJHGInYyP3kfpiRzSIVUqvp9YknysfP38LWI7bXOYPIEVM3hC_cF5anbjy2-F3LyqixpSJUQYbnxl-0xX64QANJoihtT6V0dLzySHPdC9j1SKSkAJCs9a2bjGMCVTVf8GYd78xjGD3dIOMTaw");'
+                ></div>
+                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4 px-4">
+                  <p class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em]">The Heritage Table</p>
+                  <div class="flex items-end gap-3 justify-between">
+                    <div class="flex flex-col gap-1">
+                      <p class="text-[#8a7560] text-base font-normal leading-normal">
+                        Savor a traditional Lucknowi meal in a heritage building, offering a taste of the city's rich culinary and cultural legacy.
+                      </p>
+                      <p class="text-[#8a7560] text-base font-normal leading-normal">4.6 (1500+ reviews)</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f27f0c] text-[#181411] text-sm font-medium leading-normal"
+                    >
+                      <span class="truncate">View Menu</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="p-4 @container">
+              <div class="flex flex-col items-stretch justify-start rounded-lg @xl:flex-row @xl:items-start shadow-[0_0_4px_rgba(0,0,0,0.1)] bg-white">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDy9W8JRWHkW8eBpUU5ADnlIOqHbwdMg9k-i0fzeBkPq1dNPJeBF5FzhV_sSOIiXHvhBnd76VORMrEB5KlOb_Jgn44eSGF_jbMCUhomHFXc-KzviEbpPHG3OusjqXrmaHzGLCab6tp0MA09MIg9LlKAYwzqqZA1V-ICvmT98nuC2GU3XQYx7EWfwq2Rtg9LImmhbGmSg9-DFzm-gAX0OD7RE9ch4277AaNOMAL0CFlILDXPqGJHLktbJaDsUFkwZHfGajDgE9WWwDk7");'
+                ></div>
+                <div class="flex w-full min-w-72 grow flex-col items-stretch justify-center gap-1 py-4 @xl:px-4 px-4">
+                  <p class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em]">The Nawab's Kitchen</p>
+                  <div class="flex items-end gap-3 justify-between">
+                    <div class="flex flex-col gap-1">
+                      <p class="text-[#8a7560] text-base font-normal leading-normal">
+                        Delight in a complete meal experience inspired by the Nawabs of Lucknow, featuring a blend of Mughlai and Awadhi flavors.
+                      </p>
+                      <p class="text-[#8a7560] text-base font-normal leading-normal">4.4 (1100+ reviews)</p>
+                    </div>
+                    <button
+                      class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 bg-[#f27f0c] text-[#181411] text-sm font-medium leading-normal"
+                    >
+                      <span class="truncate">View Menu</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

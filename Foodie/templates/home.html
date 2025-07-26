@@ -1,0 +1,219 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Serif%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Flavors of Lucknow</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Noto Serif", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f5f2f0] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-[#181411]">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+              </div>
+              <h2 class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em]">Flavors of Lucknow</h2>
+            </div>
+             <div class="flex items-center gap-9">
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'home' %}">Home</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'veg' %}">Vegetarian</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'nonveg' %}">Non-Vegetarian</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'meals' %}">Meals</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'desserts' %}">Desserts</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'about' %}">About</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#8a7560] flex border-none bg-[#f5f2f0] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#181411] focus:outline-0 focus:ring-0 border-none bg-[#f5f2f0] focus:border-none h-full placeholder:text-[#8a7560] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <button
+              class="flex max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 bg-[#f5f2f0] text-[#181411] gap-2 text-sm font-bold leading-normal tracking-[0.015em] min-w-0 px-2.5"
+            >
+              <div class="text-[#181411]" data-icon="Heart" data-size="20px" data-weight="regular">
+                <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="20px" fill="currentColor" viewBox="0 0 256 256">
+                  <path
+                    d="M178,32c-20.65,0-38.73,8.88-50,23.89C116.73,40.88,98.65,32,78,32A62.07,62.07,0,0,0,16,94c0,70,103.79,126.66,108.21,129a8,8,0,0,0,7.58,0C136.21,220.66,240,164,240,94A62.07,62.07,0,0,0,178,32ZM128,206.8C109.74,196.16,32,147.69,32,94A46.06,46.06,0,0,1,78,48c19.45,0,35.78,10.36,42.6,27a8,8,0,0,0,14.8,0c6.82-16.67,23.15-27,42.6-27a46.06,46.06,0,0,1,46,46C224,147.61,146.24,196.15,128,206.8Z"
+                  ></path>
+                </svg>
+              </div>
+            </button>
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA_-RLrtWYVJC0G1MBteKzquHwulcqabEsv5DU_LpA9n-BjgxSfAdil-bjXT8kWI4AHvRzK0JbRI868gcXlCDptu02EoU4nGzRalg3aC_UbGz_72fngBpTX3uqz6jWD_uySkuqc2LLtRyaxkxFBkNwr7b0DFZnbwKyedyaPIbrBLw2DCkJ_cPbm9M6pRTPojEfQpcXrmezyJ8YpTy-FVhbW2RU_JW5DHjHLPcnvblsoo38NRpUBYb7ow6ioXZHaejVSfZ1NJPSL_QcW");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="px-4 py-3">
+              <label class="flex flex-col min-w-40 h-12 w-full">
+                <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                  <div
+                    class="text-[#8a7560] flex border-none bg-[#f5f2f0] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                    data-icon="MagnifyingGlass"
+                    data-size="24px"
+                    data-weight="regular"
+                  >
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                      ></path>
+                    </svg>
+                  </div>
+                  <input
+                    placeholder="Search for food spots or cuisines"
+                    class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#181411] focus:outline-0 focus:ring-0 border-none bg-[#f5f2f0] focus:border-none h-full placeholder:text-[#8a7560] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                    value=""
+                  />
+                </div>
+              </label>
+            </div>
+            <div class="flex overflow-y-auto [-ms-scrollbar-style:none] [scrollbar-width:none] [&amp;::-webkit-scrollbar]:hidden">
+              <div class="flex items-stretch p-4 gap-3">
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBxF3-sWlGFdKYbT13BbLrnvSp9srciGIlM6ke7LQXsKd88JJQ_XRyKnHcx-GSRcKjsfA4RoSaCsNDO9r1EBM1gFv0bsl1Ag6EwSQh_da07cDmfb7bPJCj4kowRH1B7MoABM5rhjTcjXDPFrZC_D33kuG95jET8SXIq1IFG6xD3mmrCwPAtBI1TQiSXZHS63EHdapesM2fAMrwEc4kCC7uBXhjFu4e-NOQ_tnU0RHVQW3XKmj1OsFz0Gw3sexdMYs-31JfOZ8CNwPt1");'
+                  ></div>
+                  <div>
+                    <p class="text-[#181411] text-base font-medium leading-normal">Royal Dining Experience</p>
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">Indulge in a regal culinary journey at our top-rated restaurant.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBPFkYfdj2iqvvYyp-eG79fgayTGa7_-fy-Fse2pru1F62ZAdnVbGd6Es4SoA369jx6ZESjhwBv4Kx6fJajc5afh0z-l_4bAeqFQSI0hwAEYd3nOOz4b_omSoiwTnAS1Fk2WUqewYoTRjEFBYNVbY4X623Zx_WifWZhbWB6IvIAmo_PVCbtyFKeRB9hRLgWoihim2655S_GNvm1IWZs7wUrfwAv3aiKSOUUPAK9xsVz4IAegA9fy2-6zNwoS9tK-5HrzggDUnIPfqmK");'
+                  ></div>
+                  <div>
+                    <p class="text-[#181411] text-base font-medium leading-normal">Authentic Lucknow Biryani</p>
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">Savor the rich flavors of traditional Lucknow biryani.</p>
+                  </div>
+                </div>
+                <div class="flex h-full flex-1 flex-col gap-4 rounded-lg min-w-60">
+                  <div
+                    class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex flex-col"
+                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAWM7Z7-_oKw12tk1swm1z8GvgGbefkAAUbk2EjW09wQyMM0XJ0ONYNWeMXJqBLZagZqrvI4a6VhG6s9c1MhqabuO80Vp8esDqR8xNS76i-azX4jf5_qtzN0OlMRoegT0wuwLezPqiunwgtJUzZdiacUfwIaZx5qiyczkezex-RCZOLXoeCSstLc0Phw4Y8_ZKNx2Bb3ywJWZZme80zZPv9E8Q8Zyhqf1con6YzR57O8ryHIlRNeWRoppekNSx8MtjHLU0F3pSo7u5M");'
+                  ></div>
+                  <div>
+                    <p class="text-[#181411] text-base font-medium leading-normal">Mouth-Watering Kebabs</p>
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">Experience the best kebabs in town, grilled to perfection.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <h2 class="text-[#181411] text-[22px] font-bold leading-tight tracking-[-0.015em] px-4 pb-3 pt-5">Explore Categories</h2>
+            <form method="get" class="foodie-filter-form flex flex-wrap gap-4 items-center px-4 pb-4">
+              <input type="text" name="q" placeholder="Search by name or cuisine" class="border rounded px-3 py-2" value="{{ request.GET.q|default:'' }}" />
+              <input type="text" name="location" placeholder="Location" class="border rounded px-3 py-2" value="{{ request.GET.location|default:'' }}" />
+              <input type="number" name="min_price" placeholder="Min Price" class="border rounded px-3 py-2 w-24" value="{{ request.GET.min_price|default:'' }}" />
+              <input type="number" name="max_price" placeholder="Max Price" class="border rounded px-3 py-2 w-24" value="{{ request.GET.max_price|default:'' }}" />
+              <button type="submit" class="px-4 py-2 rounded bg-[#8a7560] text-white">Filter</button>
+            </form>
+            <div class="grid grid-cols-[repeat(auto-fit,minmax(158px,1fr))] gap-3 p-4">
+              <a href="{% url 'veg' %}" class="flex flex-col gap-3 pb-3 group">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:opacity-80 transition"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAL5ZpqlS7l3LQDUoMAg3rc3UpK3Sg1oxYY2HBBHanj0yUwr9_jUXPxL5PV3k7lQb9nLYjKj_qSYDqalfvEBPtt27hJdbsOhqm4D9KzrVucqlgEcrnU3ExpK8sZZI4nFFYHEtwifrFnEpXd9GC2rAJMx5kh4nQun11-bXtiK-eMQ5QLq8qln1cadHqa0is6MUjCDCpoCfLYdPrEBAK8JwwDHH6dwKYo4SK8hm6rBZ489YGD54ytt8m8jRpHT5hEEmX1bW_54hBlSx3U");'
+                ></div>
+                <p class="text-[#181411] text-base font-medium leading-normal">Vegetarian Joints</p>
+              </a>
+              <a href="{% url 'nonveg' %}" class="flex flex-col gap-3 pb-3 group">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:opacity-80 transition"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBFCk7T5Az2J_MHOv9ufaiC3KdlqAjZ9YNpaMKllNlClj-bSubAQ8y63-UyCwdvN25wUeV1FVZKIlTjdRPAL38MW2VPNSQBOZTR3WQlCOr8yZKGxBRUSjaCjETHvaKC7hRhsepP9sDQaee5mUgl3dWfXUecVRdG2JlbN2j8_kVwfGQfg3SGBL-CNGyog7lW34-PxdNQfab8QLHjH3hW1fgfKiEzHsln46GBKqzDgzaxb__0t-qnUjP5DcryJfZ13fknH6XdptU9Ny7M");'
+                ></div>
+                <p class="text-[#181411] text-base font-medium leading-normal">Non-Vegetarian Joints</p>
+              </a>
+              <a href="{% url 'meals' %}" class="flex flex-col gap-3 pb-3 group">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:opacity-80 transition"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuArO4B3dttJMB_wabHzwKVeD71Cz0cxSHG7fi1ht3h26TydCbpsXDz2sqUakgdOxkYB-6DmDK9i94NNEe2fTSwPM4fUS5W7y-3j9sXRbpjVPcoHlmVV5BAD5tSUW8zDoXxzChdwpw68putUWNvOLtA7spjFfoTzFeFE13daiaspX-xLU7Kaj1j09LOFl6b6nx1jsortgtPwnNRQ1uamA1doz5DFL_e2PisniIE4mUz__AbC3eePSDIdtxhGlke02Juv9f4O312qFZC0");'
+                ></div>
+                <p class="text-[#181411] text-base font-medium leading-normal">Full Course Meals</p>
+              </a>
+              <a href="{% url 'desserts' %}" class="flex flex-col gap-3 pb-3 group">
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-square bg-cover rounded-lg group-hover:opacity-80 transition"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAgzvusmxOubCtVYSplz6Mg8CjWeu5w0k_URK9FXOqyyjDqB91bZJ2CMVvAMAF8SPQTDaMHmXQl6AAbng6aSuAmvjQVa4bkKXZxd1sXujuK-Z8WpACTBiV8DX2JobcIA6ltK95A_PzjpaRj29neey3x-cOvYBmdJqpzbNmCqjcwTkk-YsiGKHbcVGBjlsA5T-mZlTD9CUNbDEKTtQZM7h5QXmb4TdnRE3R4kP8Dl-6I1eLE4Uual0mmPStDJAokUytb0GUP24GUjnrY");'
+                ></div>
+                <p class="text-[#181411] text-base font-medium leading-normal">Desserts</p>
+              </a>
+            </div>
+          </div>
+        </div>
+        <footer class="flex justify-center">
+          <div class="flex max-w-[960px] flex-1 flex-col">
+            <footer class="flex flex-col gap-6 px-5 py-10 text-center @container">
+              <div class="flex flex-wrap items-center justify-center gap-6 @[480px]:flex-row @[480px]:justify-around">
+                <a class="text-[#8a7560] text-base font-normal leading-normal min-w-40" href="#">Privacy Policy</a>
+                <a class="text-[#8a7560] text-base font-normal leading-normal min-w-40" href="#">Terms of Service</a>
+                <a class="text-[#8a7560] text-base font-normal leading-normal min-w-40" href="#">Contact Us</a>
+              </div>
+              <div class="flex flex-wrap justify-center gap-4">
+                <a href="#">
+                  <div class="text-[#8a7560]" data-icon="InstagramLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,80a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160ZM176,24H80A56.06,56.06,0,0,0,24,80v96a56.06,56.06,0,0,0,56,56h96a56.06,56.06,0,0,0,56-56V80A56.06,56.06,0,0,0,176,24Zm40,152a40,40,0,0,1-40,40H80a40,40,0,0,1-40-40V80A40,40,0,0,1,80,40h96a40,40,0,0,1,40,40ZM192,76a12,12,0,1,1-12-12A12,12,0,0,1,192,76Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#8a7560]" data-icon="TwitterLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M247.39,68.94A8,8,0,0,0,240,64H209.57A48.66,48.66,0,0,0,168.1,40a46.91,46.91,0,0,0-33.75,13.7A47.9,47.9,0,0,0,120,88v6.09C79.74,83.47,46.81,50.72,46.46,50.37a8,8,0,0,0-13.65,4.92c-4.31,47.79,9.57,79.77,22,98.18a110.93,110.93,0,0,0,21.88,24.2c-15.23,17.53-39.21,26.74-39.47,26.84a8,8,0,0,0-3.85,11.93c.75,1.12,3.75,5.05,11.08,8.72C53.51,229.7,65.48,232,80,232c70.67,0,129.72-54.42,135.75-124.44l29.91-29.9A8,8,0,0,0,247.39,68.94Zm-45,29.41a8,8,0,0,0-2.32,5.14C196,166.58,143.28,216,80,216c-10.56,0-18-1.4-23.22-3.08,11.51-6.25,27.56-17,37.88-32.48A8,8,0,0,0,92,169.08c-.47-.27-43.91-26.34-44-96,16,13,45.25,33.17,78.67,38.79A8,8,0,0,0,136,104V88a32,32,0,0,1,9.6-22.92A30.94,30.94,0,0,1,167.9,56c12.66.16,24.49,7.88,29.44,19.21A8,8,0,0,0,204.67,80h16Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">
+                  <div class="text-[#8a7560]" data-icon="FacebookLogo" data-size="24px" data-weight="regular">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                      <path
+                        d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm8,191.63V152h24a8,8,0,0,0,0-16H136V112a16,16,0,0,1,16-16h16a8,8,0,0,0,0-16H152a32,32,0,0,0-32,32v24H96a8,8,0,0,0,0,16h24v63.63a88,88,0,1,1,16,0Z"
+                      ></path>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+              <p class="text-[#8a7560] text-base font-normal leading-normal">@2024 Flavors of Lucknow. All rights reserved.</p>
+            </footer>
+          </div>
+        </footer>
+      </div>
+    </div>
+    <script src="{% static 'foodie-filters.js' %}"></script>
+  </body>
+</html>

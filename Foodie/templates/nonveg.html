@@ -1,0 +1,197 @@
+{% load static %}
+<html>
+  <head>
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="" />
+    <link
+      rel="stylesheet"
+      as="style"
+      onload="this.rel='stylesheet'"
+      href="https://fonts.googleapis.com/css2?display=swap&amp;family=Noto+Serif%3Awght%40400%3B500%3B700%3B900&amp;family=Noto+Sans%3Awght%40400%3B500%3B700%3B900"
+    />
+
+    <title>Flavors of Lucknow</title>
+
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  </head>
+  <body>
+    <div class="relative flex size-full min-h-screen flex-col bg-white group/design-root overflow-x-hidden" style='font-family: "Noto Serif", "Noto Sans", sans-serif;'>
+      <div class="layout-container flex h-full grow flex-col">
+        <header class="flex items-center justify-between whitespace-nowrap border-b border-solid border-b-[#f5f2f0] px-10 py-3">
+          <div class="flex items-center gap-8">
+            <div class="flex items-center gap-4 text-[#181411]">
+              <div class="size-4">
+                <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6H42L36 24L42 42H6L12 24L6 6Z" fill="currentColor"></path></svg>
+              </div>
+              <h2 class="text-[#181411] text-lg font-bold leading-tight tracking-[-0.015em]">Flavors of Lucknow</h2>
+            </div>
+            <div class="flex items-center gap-9">
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'home' %}">Home</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'veg' %}">Vegetarian</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'nonveg' %}">Non-Vegetarian</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'meals' %}">Meals</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'desserts' %}">Desserts</a>
+              <a class="text-[#181411] text-sm font-medium leading-normal" href="{% url 'about' %}">About</a>
+            </div>
+          </div>
+          <div class="flex flex-1 justify-end gap-8">
+            <label class="flex flex-col min-w-40 !h-10 max-w-64">
+              <div class="flex w-full flex-1 items-stretch rounded-lg h-full">
+                <div
+                  class="text-[#8a7560] flex border-none bg-[#f5f2f0] items-center justify-center pl-4 rounded-l-lg border-r-0"
+                  data-icon="MagnifyingGlass"
+                  data-size="24px"
+                  data-weight="regular"
+                >
+                  <svg xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" fill="currentColor" viewBox="0 0 256 256">
+                    <path
+                      d="M229.66,218.34l-50.07-50.06a88.11,88.11,0,1,0-11.31,11.31l50.06,50.07a8,8,0,0,0,11.32-11.32ZM40,112a72,72,0,1,1,72,72A72.08,72.08,0,0,1,40,112Z"
+                    ></path>
+                  </svg>
+                </div>
+                <input
+                  placeholder="Search"
+                  class="form-input flex w-full min-w-0 flex-1 resize-none overflow-hidden rounded-lg text-[#181411] focus:outline-0 focus:ring-0 border-none bg-[#f5f2f0] focus:border-none h-full placeholder:text-[#8a7560] px-4 rounded-l-none border-l-0 pl-2 text-base font-normal leading-normal"
+                  value=""
+                />
+              </div>
+            </label>
+            <!-- Removed heart icon button as per requirements -->
+            <div
+              class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10"
+              style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuAoHV4y8RFHzFNs5VKTfo5TthAAViuOpiodiMa10Xzr_VS_Rg1Cc6Y9unb2zfowjhFB_KYUxmuh_NeDK8OtA3uRr1MvNNYrc7sKExPfa_Sl7ntQaPdms6b1UeRVGqIFK1VrTELBzOaqB3cLPvEBj39QJayhvC7KzNIc2L1bfFZhUo0S7jUzijpalgQzb7YTBS6lbNQXifog8SSlXJMcLeNGcYeQjgT5sgsueCKN66ZOnbl-pIWIbtHJ2H1qJq_iwvI4q1xWEvkVK4aO");'
+            ></div>
+          </div>
+        </header>
+        <div class="px-40 flex flex-1 justify-center py-5">
+          <div class="layout-content-container flex flex-col max-w-[960px] flex-1">
+            <div class="flex flex-wrap justify-between gap-3 p-4">
+              <div class="flex min-w-72 flex-col gap-3">
+                <p class="text-[#181411] tracking-light text-[32px] font-bold leading-tight">Non-Vegetarian Delights in Lucknow</p>
+                <p class="text-[#8a7560] text-sm font-normal leading-normal">
+                  Explore the rich culinary heritage of Lucknow with our curated selection of non-vegetarian restaurants. From traditional Mughlai dishes to contemporary Awadhi
+                  cuisine, find the perfect dining experience to satisfy your cravings.
+                </p>
+              </div>
+            </div>
+            <!-- Removed drop-downs for Cuisine, Price, and Location -->
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">4.5 • Mughlai</p>
+                    <p class="text-[#181411] text-base font-bold leading-tight">Royal Spices</p>
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">
+                      Experience the authentic taste of Mughlai cuisine in an ambiance fit for royalty. Indulge in succulent kebabs, biryanis, and rich curries prepared with
+                      traditional recipes and the finest ingredients.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f5f2f0] text-[#181411] text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">View Details</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDbTl0KXvLjsnjFCzN6_EAxV1sSD3f-QsgvcOhJ19j5UP1oh1vHtIlKAVdn53qxWkLDbyyvjJcqaIu2fpia8W-AiyzpobSx1xMywMnI9r06JGprgWmZRpgtmp_RX7ThTFbG9XfBQgU0cbSSWL8EmWWIQv-jQR-VY0U4E1baXQFMSjSqWjXWlJT0_MYW4vLvrOSEjbi4GzIOSstr1lTaeGraBk9vmSyGlBt4XxfRuWRgm_COvGPeRrPWDFBHQCiiHfCyK2Dqv7H3O4K_");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">4.2 • Awadhi</p>
+                    <p class="text-[#181411] text-base font-bold leading-tight">The Awadhi Table</p>
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">
+                      Discover the culinary treasures of Awadh at The Awadhi Table. Savor signature dishes like Galouti Kebab and Nihari, known for their exquisite flavors and
+                      delicate textures. Enjoy a dining experience that reflects the rich cultural heritage of Lucknow.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f5f2f0] text-[#181411] text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">View Details</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwQ5TX1BaiKNdYzhMoTDk60oOOZMqPC0VmcI4vmOBdB62dLd5w45Pl92uDe-P5EgjjEXmxNjsbAYKPG4WEntPumLrQzfIUAVWn4kyXZnIDkW4cEBEZrweZj0UNW61Y1qCxlVK9uNWCQ4MfyBZoQPWDTZBM79SLQ8IM7ISOZJylQIs0AETOrX9qmWVp_SOm54QxVepYcY6yKl4NA36TsuxvY_iQUChVl3Twt36JM8c2LB2OF9SM3SKvNudw2wuiGfRnpE_m6MD_oScU");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">4.7 • Fusion</p>
+                    <p class="text-[#181411] text-base font-bold leading-tight">Spice Fusion</p>
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">
+                      Spice Fusion offers a unique blend of traditional Lucknowi flavors with a modern twist. Explore innovative dishes that combine classic recipes with
+                      contemporary techniques, creating a memorable dining experience.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f5f2f0] text-[#181411] text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">View Details</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuC6wcQWmSJzn0bP5PjSJj43gS-PuRZ2QsGWxXfdR679yDxckjyKzTKs8aX4TJKL_fu3dhteWjcHaG3TyJVSvW__dqLNK1CevCSozB5Yc5Pk9nCPiU3MaNv_Zbt_yN_rjDzhNIsiOZnCdHJ9-y-59vMtCRkkR3VXg6vxEw2VMcmyuO95zMCaHe1w5vccTSB80y-_57oN6egTFCgvqUObbSgQeu9WhUD9hnjbDTreX4V2Pr-0qO8kHlcJwEVZRn3ulUqpNrhm4Vs1Eusl");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">4.3 • Kebabs</p>
+                    <p class="text-[#181411] text-base font-bold leading-tight">Kebab Corner</p>
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">
+                      Kebab Corner is a haven for kebab lovers, offering a wide variety of grilled and roasted meats. From tender seekh kebabs to flavorful tikkas, each dish is
+                      prepared with precision and care, ensuring a delightful culinary journey.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f5f2f0] text-[#181411] text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">View Details</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCo1WnE8m4KzV_Vv2aEaAK4pwt70EkT1Uaa2m_jKprlg9q5MUv4KE4VurfVhSA4QrIyViEVREpzOUcrQ6nMqteMUf4ckh-lJaS340S-h4AUHj_1KNfwxuxXDoAR1JmJb05whEAJpUdam1AHy5rQioy0mBHYdRvA8F9MoXDNIuhTrol1ICtAqbcL4h2mhHNbCcoGgu6D1JEYrlDI4_Je1F-k29hK2QHunbnACLpmOyM7H3ApV1o-zpL_h4_0TUFyJ_rD88QNc7GnjW1n");'
+                ></div>
+              </div>
+            </div>
+            <div class="p-4">
+              <div class="flex items-stretch justify-between gap-4 rounded-lg bg-white p-4 shadow-[0_0_4px_rgba(0,0,0,0.1)]">
+                <div class="flex flex-[2_2_0px] flex-col gap-4">
+                  <div class="flex flex-col gap-1">
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">4.6 • Biryani</p>
+                    <p class="text-[#181411] text-base font-bold leading-tight">Biryani Palace</p>
+                    <p class="text-[#8a7560] text-sm font-normal leading-normal">
+                      Biryani Palace is renowned for its aromatic and flavorful biryanis, cooked to perfection with long-grain rice and tender meat. Choose from a range of biryani
+                      styles, each with its unique blend of spices and cooking techniques.
+                    </p>
+                  </div>
+                  <button
+                    class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-8 px-4 flex-row-reverse bg-[#f5f2f0] text-[#181411] text-sm font-medium leading-normal w-fit"
+                  >
+                    <span class="truncate">View Details</span>
+                  </button>
+                </div>
+                <div
+                  class="w-full bg-center bg-no-repeat aspect-video bg-cover rounded-lg flex-1"
+                  style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBc9vupgyjztEF0hkBjlCs6SoYJXBIRlZutdFwpCuyhVg4BbnfT3SNDheA7Sz-0kjgVxjw6oXLjuAdOdSM2Aw1QNieB5nvYsHPIoxpqshDot_31oOPJN587_7GlJQjWiLC2OYIKs_uLatTeh9f07PrFzzE2a5FJ9GS2k5G53Ub5Ga0eOxX64o6Ch1CSCy9P5TRKDxKpMF841PYvAoK11Qu_mMdkaUWWBbRtqP04MpdHNbRpdJqrA8XthFrXefqA7PtkJ6QWLDskeGvm");'
+                ></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
